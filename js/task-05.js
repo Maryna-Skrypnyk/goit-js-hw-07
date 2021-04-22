@@ -3,7 +3,7 @@ const refs = {
     output: document.querySelector("#name-output"),
 };
 
-const onInputChange = (event) => {
+const onInputChange = event => {
     refs.output.textContent = event.currentTarget.value;
 };
 

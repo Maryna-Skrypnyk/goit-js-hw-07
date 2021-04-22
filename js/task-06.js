@@ -1,13 +1,13 @@
 const inputEl = document.querySelector("#validation-input");
-
-const dataLength = inputEl.getAttribute("data-length");
  
 const onInputBlur = event => {
-    event.currentTarget.value.length === Number(dataLength) ?
+    const inputLength = inputEl.getAttribute("data-length");
+    
+    event.currentTarget.value.length === Number(inputLength) ?
         inputEl.classList.add('valid') : inputEl.classList.add('invalid');
 };
 
-const onInputFocus = () => {
+const onInputFocus = (event) => {
     inputEl.classList.remove('valid', 'invalid');
 }
 
