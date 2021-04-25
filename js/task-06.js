@@ -7,7 +7,7 @@ const onInputBlur = event => {
         inputEl.classList.add('valid') : inputEl.classList.add('invalid');
 };
 
-const onInputFocus = (event) => {
+const onInputFocus = () => {
     inputEl.classList.remove('valid', 'invalid');
 }
 
