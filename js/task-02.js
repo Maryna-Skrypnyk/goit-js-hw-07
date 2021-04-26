@@ -7,6 +7,23 @@ const ingredients = [
   'Приправи',
 ];
 
+// function
+
+const ingredientsEl = document.querySelector('#ingredients');
+
+const makeIngredientsItems = ingredients => {
+  return ingredients.map(ingredient => {
+    const itemEl = document.createElement('li');
+    itemEl.textContent = ingredient;
+
+    return itemEl;
+  });
+};
+
+const items = makeIngredientsItems(ingredients);
+ingredientsEl.append(...items);
+console.log(ingredientsEl);
+
 // oldSchool
 
 // const ingredientsEl = document.querySelector("#ingredients");
@@ -35,21 +52,3 @@ const ingredients = [
 
 // ingredientsEl.append(...items);
 // console.log(ingredientsEl);
-
-
-// function
-
-const ingredientsEl = document.querySelector("#ingredients");
-
-const makeIngredientsItems = ingredients => {
-    return ingredients.map(ingredient => {
-        const itemEl = document.createElement("li");
-        itemEl.textContent = ingredient;
-
-        return itemEl;
-    });
-};
-
-const items = makeIngredientsItems(ingredients);
-ingredientsEl.append(...items);
-console.log(ingredientsEl);
